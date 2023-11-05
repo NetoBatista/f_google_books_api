@@ -169,7 +169,7 @@ class SaleInfoListPrice {
 
   factory SaleInfoListPrice.fromJson(Map<String, dynamic> json) {
     return SaleInfoListPrice(
-      amount: json["amount"],
+      amount: double.tryParse(json["amount"].toString()),
       currencyCode: json["currencyCode"],
     );
   }
@@ -190,7 +190,7 @@ class Offer {
 
   factory Offer.fromJson(Map<String, dynamic> json) {
     return Offer(
-      finskyOfferType: json["finskyOfferType"],
+      finskyOfferType: int.tryParse(json["finskyOfferType"].toString()),
       listPrice: json["listPrice"] == null
           ? null
           : OfferListPrice.fromJson(json["listPrice"]),
@@ -213,7 +213,7 @@ class OfferListPrice {
 
   factory OfferListPrice.fromJson(Map<String, dynamic> json) {
     return OfferListPrice(
-      amountInMicros: json["amountInMicros"],
+      amountInMicros: int.tryParse(json["amountInMicros"].toString()),
       currencyCode: json["currencyCode"],
     );
   }
@@ -296,13 +296,13 @@ class VolumeInfo {
       readingModes: json["readingModes"] == null
           ? null
           : ReadingModes.fromJson(json["readingModes"]),
-      pageCount: json["pageCount"],
+      pageCount: int.tryParse(json["pageCount"].toString()),
       printType: json["printType"],
       categories: json["categories"] == null
           ? []
           : List<String>.from(json["categories"]!.map((x) => x)),
-      averageRating: json["averageRating"],
-      ratingsCount: json["ratingsCount"],
+      averageRating: int.tryParse(json["averageRating"].toString()),
+      ratingsCount: int.tryParse(json["ratingsCount"].toString()),
       maturityRating: json["maturityRating"],
       allowAnonLogging: json["allowAnonLogging"],
       contentVersion: json["contentVersion"],
