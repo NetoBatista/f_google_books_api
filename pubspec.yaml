@@ -1,7 +1,7 @@
 name: f_google_books_api
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: Package to search ebook using google API
+version: 1.0.0
+homepage: https://github.com/NetoBatista/f_google_books_api
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
