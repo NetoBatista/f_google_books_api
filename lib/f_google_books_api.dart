@@ -45,7 +45,7 @@ class FGoogleBooksApi {
   ) {
     var response = '$_baseAddress/volumes';
 
-    response += 'q=${volumeRequestModel.query}';
+    response += '?q=${volumeRequestModel.query}';
     response += '&key=$_apiKey';
 
     if (volumeRequestModel.startIndex != null) {
@@ -53,7 +53,7 @@ class FGoogleBooksApi {
     }
 
     if (volumeRequestModel.maxResults != null) {
-      response += '&maxResults=${volumeRequestModel.startIndex}';
+      response += '&maxResults=${volumeRequestModel.maxResults}';
     }
 
     if (volumeRequestModel.epub == true) {

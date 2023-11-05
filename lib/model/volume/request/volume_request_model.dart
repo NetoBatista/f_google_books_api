@@ -44,5 +44,9 @@ class VolumeRequestModel {
     required this.query,
     this.startIndex,
     this.maxResults,
+    this.epub,
+    this.filter,
+    this.printType,
+    this.orderBy,
   });
 }
