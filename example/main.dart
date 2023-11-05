@@ -12,9 +12,9 @@ void main(List<String> arguments) async {
 
   //Create a requestModel
   var requestModel = VolumeRequestModel(
-    query: 'Flores para Algernon',
+    query: 'Harry Potter',
     startIndex: 0, // optional
-    maxResults: 2, // optional
+    maxResults: 10, // optional
     epub: true, // optional
     filter: VolumeFilterModel.full, // optional
     orderBy: VolumeSortingModel.newest, // optional

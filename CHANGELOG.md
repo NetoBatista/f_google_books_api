@@ -1,3 +1,8 @@
+# 1.0.1
+
+* Add examples
+* Fix parse problem 
+
 # 1.0.0
 
 * Query: Search for volumes that contain this text string
