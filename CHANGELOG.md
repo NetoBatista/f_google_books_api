@@ -1,3 +1,8 @@
+# 1.0.2
+
+* Update examples
+* Create instance
+
 # 1.0.1
 
 * Add examples

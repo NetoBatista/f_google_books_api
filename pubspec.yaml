@@ -1,6 +1,6 @@
 name: f_google_books_api
 description: Package to search ebook using google API
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/NetoBatista/f_google_books_api
 
 environment:
