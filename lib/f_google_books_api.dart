@@ -8,14 +8,19 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 
 class FGoogleBooksApi {
+  FGoogleBooksApi._();
+
+  static final FGoogleBooksApi instance = FGoogleBooksApi._();
+
   final String _baseAddress = 'https://www.googleapis.com/books/v1';
-  final String _apiKey;
+  String _apiKey = '';
 
   ///Initialize the FGoogleBookApis project, an api key is required to initialize the api.
   ///1. Access https://console.cloud.google.com/apis/credentials
   ///2. Click create api key
   ///3. Go to https://console.cloud.google.com/apis/api/books.googleapis.com and enable the Books API
-  FGoogleBooksApi(this._apiKey) {
+  void initialize({required String apiKey}) {
+    _apiKey = apiKey;
     if (_apiKey.isEmpty) {
       throw FGoogleBooksApiException(
         "API key not valid. Please pass a valid API key.",
